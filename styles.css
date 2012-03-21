@@ -1,0 +1,148 @@
+
+
+
+h1 { 
+  font-size: 1.4em;
+}
+
+h2 { 
+  font-size: 1.2em;
+}
+
+h3 { 
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+body { 
+  font-family: Helvetica, Arial, Sans, sans-serif;
+}
+
+.sideimage { 
+  margin-left: 1em;
+  margin-bottom: 1em;
+  float: right;
+}
+
+.quotes li { 
+  margin-bottom: 0.2em;
+}
+
+h2 { 
+  clear: both;
+  padding-top: 1em; 
+  border-color: #9090a0;
+  border-top-width: thin;
+  border-top-style: solid;
+}
+
+.author { 
+  font-size: 1.2em;
+  font-weight: bold;
+  clear: both;
+  margin-top: 1em;
+}
+
+.author a { 
+  margin-right: 1em;
+}
+
+
+a:link { 
+  color: #505080;
+  text-decoration: none; 
+}
+
+a:visited {
+  color: #707070;
+  text-decoration: none; 
+}
+
+a:hover {
+  color: firebrick; 
+  text-decoration: underline; 
+}
+
+ul { 
+  list-style-type: square;
+}
+
+li { 
+}
+
+table { 
+  border-style: none;
+  font-size: 0.9em;
+  margin-left: 2em;
+}
+
+
+tr { 
+  background: #eee;
+}
+
+tr:hover { 
+  background: #ccc;
+}
+
+th { 
+  border-style: none;
+  background: firebrick;
+  padding: 0.5em;
+  color: white;
+}
+
+td { 
+  border-style: none;
+
+  padding: 0.5em;
+}
+
+.covers { 
+  font-size: 1em;
+}
+
+.covers td { 
+  background: white;
+  border="0";
+  cellpadding="2";
+  cellspacing="2";
+}
+
+form { 
+  border-color: #9090a0;
+  border-style: solid;
+  border-width: thin;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+dt { 
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+dd { 
+  margin-bottom: 0.5em;
+}
+
+.question { 
+  margin-top: 2em;
+  font-weight: bold;
+}
+
+.question:before { 
+  content: "Question: ";
+  font-style: italic;
+  margin-right: 0.5em;
+}
+
+.answer:before { 
+  content: "Answer: ";
+  font-style: italic;
+  margin-right: 0.5em;
+}
