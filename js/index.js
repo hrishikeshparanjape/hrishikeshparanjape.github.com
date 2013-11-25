@@ -70,7 +70,7 @@ App = new Ext.Application({
 				duration:300,
 				direction:'down'
 			},
-			activeItem:2
+			activeItem:3
 		});
 		var delayedTask=new Ext.util.DelayedTask(function(){
 			stopCarousel=true;
