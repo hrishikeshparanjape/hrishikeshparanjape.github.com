@@ -9,6 +9,9 @@ App = new Ext.Application({
 				html:'<img class="imageFit" src="images/lab.jpg" />'
     		},{
 				html:'<img class="imageFit" src="images/ridgeback.jpg" />'
+    		},
+    		{
+				html:'<img class="imageFit" src="http://upload.wikimedia.org/wikipedia/commons/2/28/Red_rose.jpg" />'
     		}],
 			listeners:{
 				cardswitch: function(){
@@ -30,6 +33,9 @@ App = new Ext.Application({
 				html:'<img class="imageFit" src="images/lab.jpg" />'
     		},{
 				html:'<img class="imageFit" src="images/ridgeback.jpg" />'
+    		},
+    		{
+				html:'<img class="imageFit" src="http://upload.wikimedia.org/wikipedia/commons/2/28/Red_rose.jpg" />'
     		}],
 			listeners:{
 				cardswitch:function(){
@@ -50,6 +56,9 @@ App = new Ext.Application({
 				html:'<img class="imageFit" src="images/lab.jpg" />'
     		},{
 				html:'<img class="imageFit" src="images/ridgeback.jpg" />'
+    		},
+    		{
+				html:'<img class="imageFit" src="http://upload.wikimedia.org/wikipedia/commons/2/28/Red_rose.jpg" />'
     		}],
 			listeners:{
 				cardswitch:function(){
