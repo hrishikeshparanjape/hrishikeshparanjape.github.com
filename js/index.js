@@ -15,7 +15,7 @@ App = new Ext.Application({
     		}],
 			listeners:{
 				cardswitch: function(){
-					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 3);
+					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 4);
 				
 				}
 			},
@@ -39,7 +39,7 @@ App = new Ext.Application({
     		}],
 			listeners:{
 				cardswitch:function(){
-					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 3);
+					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 4);
 				}
 			},
 			cardSwitchAnimation:{
@@ -62,7 +62,7 @@ App = new Ext.Application({
     		}],
 			listeners:{
 				cardswitch:function(){
-					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 3);
+					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 4);
 				}
 			},
 			cardSwitchAnimation:{
@@ -75,7 +75,7 @@ App = new Ext.Application({
 		var delayedTask=new Ext.util.DelayedTask(function(){
 			stopCarousel=true;
 			if(carousel1.getActiveIndex()==carousel2.getActiveIndex()&&carousel2.getActiveIndex()==carousel3.getActiveIndex())
-				Ext.Msg.alert('Yeyyy','You got '+ ["English Bulldog", "Lab", "Ridgeback"][carousel1.getActiveIndex()],Ext.emptyFn);
+				Ext.Msg.alert('Yeyyy','You got '+ ["English Bulldog", "Lab", "Ridgeback", "Red Rose"][carousel1.getActiveIndex()],Ext.emptyFn);
 		});
 		var cmp= new Ext.Panel({
 			layout:{
@@ -94,9 +94,9 @@ App = new Ext.Application({
 					text:'Hit',
 					handler:function(){
 							stopCarousel=false;
-							carousel1.setActiveItem((carousel1.getActiveIndex()+1)%3);
-							carousel2.setActiveItem((carousel2.getActiveIndex()+1)%3);
-							carousel3.setActiveItem((carousel3.getActiveIndex()+1)%3);
+							carousel1.setActiveItem((carousel1.getActiveIndex()+1)%4);
+							carousel2.setActiveItem((carousel2.getActiveIndex()+1)%4);
+							carousel3.setActiveItem((carousel3.getActiveIndex()+1)%4);
 							delayedTask.delay(2000);	
 					}
 				}]
