@@ -9,13 +9,10 @@ App = new Ext.Application({
 				html:'<img class="imageFit" src="images/lab.jpg" />'
     		},{
 				html:'<img class="imageFit" src="images/ridgeback.jpg" />'
-    		},
-    		{
-				html:'<img class="imageFit" src="http://upload.wikimedia.org/wikipedia/commons/2/28/Red_rose.jpg" />'
     		}],
 			listeners:{
 				cardswitch: function(){
-					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 4);
+					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 3);
 				
 				}
 			},
@@ -33,13 +30,10 @@ App = new Ext.Application({
 				html:'<img class="imageFit" src="images/lab.jpg" />'
     		},{
 				html:'<img class="imageFit" src="images/ridgeback.jpg" />'
-    		},
-    		{
-				html:'<img class="imageFit" src="http://upload.wikimedia.org/wikipedia/commons/2/28/Red_rose.jpg" />'
     		}],
 			listeners:{
 				cardswitch:function(){
-					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 4);
+					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 3);
 				}
 			},
 			cardSwitchAnimation:{
@@ -56,13 +50,10 @@ App = new Ext.Application({
 				html:'<img class="imageFit" src="images/lab.jpg" />'
     		},{
 				html:'<img class="imageFit" src="images/ridgeback.jpg" />'
-    		},
-    		{
-				html:'<img class="imageFit" src="http://upload.wikimedia.org/wikipedia/commons/2/28/Red_rose.jpg" />'
     		}],
 			listeners:{
 				cardswitch:function(){
-					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 4);
+					if (!stopCarousel) this.setActiveItem((this.getActiveIndex() + 1) % 3);
 				}
 			},
 			cardSwitchAnimation:{
@@ -70,7 +61,7 @@ App = new Ext.Application({
 				duration:300,
 				direction:'down'
 			},
-			activeItem:3
+			activeItem:2
 		});
 		var delayedTask=new Ext.util.DelayedTask(function(){
 			stopCarousel=true;
@@ -94,9 +85,9 @@ App = new Ext.Application({
 					text:'Hit',
 					handler:function(){
 							stopCarousel=false;
-							carousel1.setActiveItem((carousel1.getActiveIndex()+1)%4);
-							carousel2.setActiveItem((carousel2.getActiveIndex()+1)%4);
-							carousel3.setActiveItem((carousel3.getActiveIndex()+1)%4);
+							carousel1.setActiveItem((carousel1.getActiveIndex()+1)%3);
+							carousel2.setActiveItem((carousel2.getActiveIndex()+1)%3);
+							carousel3.setActiveItem((carousel3.getActiveIndex()+1)%3);
 							delayedTask.delay(2000);	
 					}
 				}]
