@@ -79,7 +79,7 @@ App = new Ext.Application({
 			dockedItems: [{
 				xtype: "toolbar",
 				dock: "top",
-				title:'Heather\'s Puppies',
+				title:'Mega Puppies',
 				items:[{
 					xtype:'button',
 					text:'Hit',
