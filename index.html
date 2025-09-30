@@ -1,44 +1,226 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Hrishikesh Paranjape's Home Page</title>
-    <link href="styles.css" rel="stylesheet" type="text/css">
-    <meta http-equiv="content-type" content="text/html; charset=us-ascii">
-  </head>
-  <body>
-    <h1>Hrishikesh (Rishi) Paranjape</h1>
-    <!--<h1>Hrishikesh Paranjape<img class="sideimage" alt="Photo of Hrishikesh Paranjape" src="paranjape.jpg"></h1>-->
-    <p><a href="mailto:hrishikeshp19@gmail.com">hrishikeshp19@gmail.com</a></p>
-    <p>I was born and raised in <a href="http://en.wikipedia.org/wiki/Pune">Pune</a>, a culturally rich town in <a href="http://en.wikipedia.org/wiki/Maharashtra">Maharashtra</a>, <a href="http://en.wikipedia.org/wiki/India">India</a>. I received my Bachelors degree in Computer Science from <a href="http://www.unipune.ac.in/">University of Pune</a>. After completing my Bachelor's education, I started attending <a href="http://www.cs.sjsu.edu/">San Jose State University</a> for my Master's degree in Computer Science. I graduated from SJSU in May 2012. Currently, I am working at <a href="http://www.blurb.com/">Blurb Inc</a> as a Software Engineer. In my leisure time, I play Tennis and make robots using Arduino.</p>
-    <h2>Links</h2>
-    <ul>
-      <li><a href="http://stackoverflow.com/users/929701/hrishikeshp19">My StackOverflow</a></li>
-      <li><a href="http://www.linkedin.com/in/hrishikeshparanjape">My LinkedIn</a></li>
-      <li><a href="https://github.com/hrishikeshparanjape">My Github</a></li>
-    </ul>
-    <h2>Skills</h2>
-    <ul>
-      <li>Back End Web Development: Java, Spring Framework, AspectJ, SQL, Ruby on Rails</li>
-      <li>Front End Web Development: HTML, CSS, JavaScript, jQuery, Sencha Touch, Highcharts, Raphael JS</li>
-      <li>Databases: PostgreSQL, MySQL</li>
-      <li>Version Control Systems: Git, Subversion</li>
-      <li>Application monitoring: Splunk, Sumo Logic, New Relic</li>
-      <li>SaaS: Vindicia, Stripe, Netsuite, ExactTarget, Sendgrid, Mandrill</li>
-      <li>PaaS: Heroku, AWS</li>
-    </ul>
-    <h2>Professional Experience</h2>
-    <ul>
-      <li>Blurb Inc -Software Engineer (Jun 2015 - Present)</li>
-      <li>Next Issue Media -Software Engineer (Oct 2012 - Jun 2015)</li>
-      <li>Infineta Systems -Software Engineer (Mar 2012 - Oct 2012)</li>
-      <li>Novartis Institutes for Biomedical Research -Intern	(Jun 2011 - Dec 2011)</li>
-      <li>Aftek Limited -Intern (Jul 2009 - Jun 2010)</li>
-    </ul>
-    <h2>Conference Presentations</h2>
-    <ul>
-      <li>The IEEE International Conference on Granular Computing, HangZhou, China, 2012, Classifying Twitter Data with Naive Bayes Classifier</li>
-    </ul>
-    <h2>Photo</h2>
-    <img src="https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xfp1/v/t1.0-9/11080947_10202572997206659_9166173113798964267_n.jpg?oh=ff290f5df6e4c4c3e1d71c996aa34777&oe=56F24555"/>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hrishikesh Paranjape</title>
+  <meta name="description" content="Hrishikesh Paranjape - Software Engineer at Instagram. Researcher. Top Stack Overflow Contributor"/>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa5b1; --accent:#1fb6ff; --glass: rgba(255,255,255,0.03);
+      --max-width:1000px;
+      color-scheme: dark;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071026 0%, #071827 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      display:flex;
+      justify-content:center;
+      padding:40px 20px;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      padding:28px;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+    }
+    @media (max-width:920px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+    /* Hero */
+    .hero{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    .avatar{
+      width:112px;
+      height:112px;
+      border-radius:16px;
+      background:linear-gradient(135deg,var(--accent), #6ee7b7);
+      flex-shrink:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:32px;
+      color:#022331;
+      box-shadow: 0 6px 20px rgba(31,182,255,0.08);
+    }
+    h1{ margin:0; font-size:22px; letter-spacing:-0.2px;}
+    .subtitle{ margin:6px 0 0; color:var(--muted); font-size:14px;}
+    .cta-row{ margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;}
+    .btn{
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.04);
+      background:var(--glass);
+      color:inherit;
+      text-decoration:none;
+      font-size:14px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .card{
+      background: rgba(255,255,255,0.02);
+      border-radius:12px;
+      padding:16px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .muted{ color:var(--muted); font-size:13px; }
+    .section{ margin-top:18px; }
+    .meta-list{ display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+    .meta-item{ background:rgba(255,255,255,0.02); padding:8px 10px; border-radius:999px; font-size:13px; color:var(--muted); border:1px solid rgba(255,255,255,0.01); }
+    /* right column */
+    .sidebar h3{ margin-top:0; margin-bottom:8px;}
+    .link{ color:var(--accent); text-decoration:none; }
+    .skill-pill{ display:inline-block; margin:6px 6px 0 0; padding:8px 10px; border-radius:999px; border:1px solid rgba(255,255,255,0.02); font-size:13px; color:var(--muted);}
+    footer{ margin-top:28px; color:var(--muted); font-size:13px; text-align:center;}
+    .pub-list{ list-style:none; padding:0; margin:0; }
+    .pub-list li{ padding:10px 0; border-top:1px dashed rgba(255,255,255,0.02); }
+    .small{ font-size:13px; color:var(--muted); }
+    .contact-row{ display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;}
+    .social a{ color:var(--muted); text-decoration:none; margin-right:10px; font-size:14px;}
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="page-title">
+    <div class="grid">
+      <section>
+        <div class="hero">
+          <div class="avatar" aria-hidden="true">HP</div>
+          <div>
+            <h1 id="page-title">Hrishikesh Paranjape</h1>
+            <div class="subtitle">Software Engineer — Instagram | Researcher | Technical leader</div>
+
+            <div class="cta-row">
+              <a class="btn" href="mailto:hrishikeshp19@gmail.com">✉️ Email</a>
+              <a class="btn" href="https://www.linkedin.com/in/hrishikeshparanjape/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn" href="https://stackoverflow.com/users/929701/hrishikeshp19" target="_blank" rel="noopener">Stack Overflow</a>
+              <a class="btn" href="https://substack.com/@hrishikeshparanjape" target="_blank" rel="noopener">Substack</a>
+            </div>
+
+            <div class="section">
+              <div class="card">
+                <p><strong>About</strong></p>
+                <p class="muted">
+                  I am a software engineer and a computer science researcher. I was born and raised in Pune, a culturally rich town in Maharashtra, India. I moved to the US in 2010 for grad school. In my leisure time, I play Tennis and make robots using Arduino.
+                  At work, I build reliable, scalable backend systems and ML-driven features at Instagram. My work spans production services, data-driven product engineering, and reducing operational costs at scale.
+                </p>
+                <div class="meta-list" aria-hidden="true">
+                  <div class="meta-item">Engineering leadership</div>
+                  <div class="meta-item">Large-scale systems</div>
+                  <div class="meta-item">ML & applied research</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <h3>Highlights</h3>
+              <ul class="small">
+                <li>Software Engineer at Instagram - focused on operational efficiency and digital well-being</li>
+                <li>Published author: <em>"Classifying Twitter Data with Naive Bayes Classifier"</em> (IEEE conference). Academic citations: 30+. </li>
+                <li>Active technical community contributor: Stack Overflow profile with 9,000+ reputation, 27 gold badges, and content reaching over 1.6M users.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="section card">
+          <h3>Experience (selected)</h3>
+          <p class="muted"><strong>Instagram - Software Engineer</strong> <span style="float:right" class="small muted">Product & infrastructure</span></p>
+          <p class="muted"><strong>PayPal - Software Engineer</strong> <span style="float:right" class="small muted">Infrastructure</span></p>
+          <p class="muted"><strong>Lyft - Software Engineer</strong> <span style="float:right" class="small muted">Product & infrastructure</span></p>
+          <p class="muted"><strong>Blurb - Software Engineer</strong> <span style="float:right" class="small muted">Product</span></p>
+          <p class="muted"><strong>Texture - Software Engineer</strong> <span style="float:right" class="small muted">Product</span></p>
+          
+
+          <hr style="border:none;border-top:1px dashed rgba(255,255,255,0.02);margin:14px 0;">
+
+          <p class="muted"><strong>Research & Publications</strong></p>
+          <ul class="pub-list">
+            <li>
+              <strong>Classifying Twitter Data with Naive Bayes Classifier</strong> — IEEE conference. A practical exploration of text classification approaches and feature engineering for short-form social content. (30+ citations)
+            </li>
+          </ul>
+        </div>
+
+        <div class="section card">
+          <h3>Community contributions</h3>
+          <ul class="small">
+            <li>Judge — Codie Awards & multiple hackathons</li>
+            <li>Active in open-source, mentoring, and conference reviewing</li>
+          </ul>
+        </div>
+
+        <div class="section card">
+          <h3>Contact</h3>
+          <p class="small muted">For speaking, consulting, or collaboration inquiries:</p>
+          <div class="contact-row">
+            <a class="btn" href="mailto:hrishikeshp19@gmail.com">Email</a>
+            <a class="btn" href="https://www.linkedin.com/in/hrishikeshparanjape/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://stackoverflow.com/users/929701/hrishikeshp19" target="_blank" rel="noopener">Stack Overflow</a>
+            <a class="btn" href="https://substack.com/@hrishikeshparanjape" target="_blank" rel="noopener">Substack</a>
+          </div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h3>Quick facts</h3>
+          <p class="small"><strong>Name:</strong> Hrishikesh Paranjape</p>
+          <p class="small"><strong>Current role:</strong> Software Engineer, Instagram</p>
+          <p class="small"><strong>Areas:</strong> Backend systems, ML-driven product features, reliability engineering, scale</p>
+          <div style="margin-top:12px;">
+            <div class="small muted">Notable metrics</div>
+            <div class="small">Stack Overflow reach: 1.6M+ users • Reputation: 9k+ • Gold badges: 27</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px;">
+          <h3>Skills</h3>
+          <div>
+            <span class="skill-pill">Distributed Systems</span>
+            <span class="skill-pill">Backend Engineering</span>
+            <span class="skill-pill">Machine Learning (applied)</span>
+            <span class="skill-pill">Data-driven Product</span>
+            <span class="skill-pill">System Reliability</span>
+            <span class="skill-pill">Mentoring & Review</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px;">
+          <h3>Selected links</h3>
+          <p class="small"><a class="link" href="https://stackoverflow.com/users/929701/hrishikeshp19" target="_blank" rel="noopener">Stack Overflow profile</a></p>
+          <p class="small"><a class="link" href="https://www.linkedin.com/in/hrishikeshparanjape/" target="_blank" rel="noopener">LinkedIn</a></p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="small muted">© <span id="year"></span> Hrishikesh Paranjape — Built with care. Content accurate to the information you previously shared; update any links or contacts as needed.</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
